@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ReactPlayer from 'react-player'
+import Player from "./Components/Player"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+
+  state = {
+    urls: [],
+    searchTerm: "",
+  }
+
+  changeVidCode = (e) =>{
+    e.preventDefault()
+    this.setState({urls: [...this.state.urls, this.state.searchTerm], searchTerm: ""})
+  }
+
+  vidCodeFormChange = (e) => {
+    this.setState({searchTerm: e.target.value})
+  }
+
+  render(){
+    console.log(this.state.searchTerm)
+    return (
+      <div>
+        <div className="defaultCenter">
+          <form onSubmit={this.changeVidCode}>
+            <input onChange={this.vidCodeFormChange}/>
+          </form>
+        </div>
+        <div className="defaultCenter">
+          {this.state.urls.map(url => <Player url={url}/>)}
+        </div>
+      </div>
+    )
+  }
+
 }
-
 export default App;
