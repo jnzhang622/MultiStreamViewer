@@ -42,9 +42,11 @@ class App extends React.Component {
     console.log(this.state.searchTerm)
     return (
       <div>
-        <div className="defaultCenter">
+        <div className="searchBarDiv">
           <form onSubmit={this.changeVidCode}>
-            <input onChange={this.vidCodeFormChange}/>
+            <input className="searchBar" 
+              onChange={this.vidCodeFormChange} 
+              value={this.state.searchTerm}/>
           </form>
         </div>
         <div className="defaultCenter">
