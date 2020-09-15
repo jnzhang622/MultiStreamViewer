@@ -39,15 +39,12 @@ class Player extends React.Component {
           <div className="divCont">
             <div>
               <div className="defaultCenter">
-                {/* <form onSubmit={this.changeVidCode}>
-                  <input onChange={this.vidCodeFormChange}/>
-                </form> */}
               </div>
-              <div className="defaultCenter">
+              {/* <div className="defaultCenter">
                 <button onClick={this.decreaseSize}>-</button>
                 <button onClick={this.resetSize}>Reset</button>
                 <button onClick={this.increaseSize}>+</button>
-              </div>
+              </div> */}
               {/* <div className="defaultCenter">
                 <button onClick={this.rotateButton}>Rotate</button>
               </div> */}
@@ -56,8 +53,8 @@ class Player extends React.Component {
               style={{transform: `rotate(${this.state.rotation}deg)`}}>
               <ReactPlayer
                 url={`${this.props.url}`}
-                height={this.state.height}
-                width={this.state.width}
+                height={this.props.height}
+                width={this.props.width}
                 playing = {true}
                 controls = {true}
               />
