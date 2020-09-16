@@ -1,6 +1,5 @@
 import React from 'react';
 import "./App.css";
-import ReactPlayer from 'react-player'
 import Player from "./Components/Player"
 
 
@@ -59,6 +58,18 @@ class App extends React.Component {
             <Player url={url} 
               height={this.state.height}
               width={this.state.width}/>)}
+        </div>
+        <div className="defaultCenter">
+          <button onClick={this.decreaseSize}>-</button>
+          <button onClick={this.resetSize}>Reset</button>
+          <button onClick={this.increaseSize}>+</button>
+        </div>
+        <div className="searchBarDiv">
+          <form onSubmit={this.changeVidCode}>
+            <input className="searchBar" 
+              onChange={this.vidCodeFormChange} 
+              value={this.state.searchTerm}/>
+          </form>
         </div>
       </div>
     )

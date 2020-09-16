@@ -1,0 +1,64 @@
+{
+    "streamers": [
+        {
+            "name": "Pokimane",
+            "url": "https://www.twitch.tv/pokimane"
+        },
+        {
+            "name": "Bnans",
+            "url": "https://www.twitch.tv/bnans"
+        },
+        {
+            "name": "Sykkuno",
+            "url": "https://www.twitch.tv/sykkuno"
+        },
+        {
+            "name": "Scarra",
+            "url": "https://www.twitch.tv/scarra"
+        },
+        {
+            "name": "PeterparkTV",
+            "url": "https://www.twitch.tv/peterparkTV"
+        },
+        {
+            "name": "Masayoshi",
+            "url": "https://www.twitch.tv/masayoshi"
+        },
+        {
+            "name": "LilyPichu",
+            "url": "https://www.twitch.tv/lilypichu"
+        },
+        {
+            "name": "Fuslie",
+            "url": "https://www.twitch.tv/fuslie"
+        },
+        {
+            "name": "Neytiri",
+            "url": "https://www.twitch.tv/neytiri"
+        },
+        {
+            "name": "QuarterJade",
+            "url": "https://www.twitch.tv/quarterjade"
+        },
+        {
+            "name": "Yvonnie",
+            "url": "https://www.twitch.tv/yvonnie"
+        },
+        {
+            "name": "Shiphtur",
+            "url": "https://www.twitch.tv/shiphtur"
+        },
+        {
+            "name": "xChocoBars",
+            "url": "https://www.twitch.tv/xchocobars"
+        },
+        {
+            "name": "Natsumiii",
+            "url": "https://www.twitch.tv/natsumiii"
+        },
+        {
+            "name": "iGUMDROP",
+            "url": "https://www.twitch.tv/igumdrop"
+        }
+    ]
+}
