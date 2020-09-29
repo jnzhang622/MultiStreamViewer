@@ -1,23 +1,19 @@
 import React from 'react';
 import "../App.css";
-
+import StreamerBarItem from "./StreamerBarItem";
 
 class StreamerBar extends React.Component {
 
     state = {
-        streamers: [],
     }
 
-    componentDidMount() {
-        fetch(`http://localhost:6001/streamers`)
-          .then(resp => resp.json())
-          .then(arr => this.setState({ streamers: arr }))
-      }
+    
 
     render(){
+        // console.log(this.props.streamers)
         return (
             <div>
-                {}
+                {this.props.streamers.map(streamer => <StreamerBarItem streamer={streamer}/>) }
             </div>
         )
       }
