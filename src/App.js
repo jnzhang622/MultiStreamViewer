@@ -11,7 +11,7 @@ class App extends React.Component {
     streamers: [],
     searchTerm: "",
     height: 500,
-    width: 900,
+    width: 890,
   }
 
   componentDidMount() {
@@ -31,18 +31,18 @@ class App extends React.Component {
     
   increaseSize = () =>{
     this.setState({
-      height: this.state.height * 1.1,
-      width: this.state.width * 1.1})
+      height: this.state.height + 50,
+      width: this.state.width + 89})
   }
   resetSize = () =>{
     this.setState({
-      height: 719,
-      width: 1261})
+      height: 500,
+      width: 890})
   }
   decreaseSize = () =>{
     this.setState({
-      height: this.state.height * .9,
-      width: this.state.width * .9})
+      height: this.state.height - 50,
+      width: this.state.width - 89})
   }
   streamerItemClick = (e) =>{
     let updateUrls = []
@@ -56,11 +56,13 @@ class App extends React.Component {
   }
 
   render(){
-    // console.log(this.state.streamers)
     return (
       <div>
         <div className="streamerBar">
-          <StreamerBar renderedUrls={this.state.urls} streamers={this.state.streamers} streamerItemClick={this.streamerItemClick}/>
+          <StreamerBar 
+            renderedUrls={this.state.urls} 
+            streamers={this.state.streamers} 
+            streamerItemClick={this.streamerItemClick}/>
         </div>
 
         <div>
@@ -82,18 +84,6 @@ class App extends React.Component {
                 height={this.state.height}
                 width={this.state.width}/>)}
           </div>
-          {/* <div className="defaultCenter">
-            <button onClick={this.decreaseSize}>-</button>
-            <button onClick={this.resetSize}>Reset</button>
-            <button onClick={this.increaseSize}>+</button>
-          </div>
-          <div className="searchBarDiv">
-            <form onSubmit={this.changeVidCode}>
-              <input className="searchBar" 
-                onChange={this.vidCodeFormChange} 
-                value={this.state.searchTerm}/>
-            </form>
-          </div> */}
         </div>
 
       </div>

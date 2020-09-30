@@ -2,17 +2,6 @@ import React from 'react';
 import "../App.css";
 
 class StreamerBarItem extends React.Component {
-
-    state = {
-        rendered: false
-    }
-
-    renderedState = () => {
-        this.setState({rendered: !this.state.rendered})
-    }
-
-    
-
     render(){
         // console.log(this.props.streamer)
         return (
