@@ -12,8 +12,13 @@ class StreamerBar extends React.Component {
     render(){
         // console.log(this.props.streamers)
         return (
-            <div>
-                {this.props.streamers.map(streamer => <StreamerBarItem streamer={streamer}/>) }
+            <div >
+                {
+                this.props.streamers.map(streamer => 
+                <StreamerBarItem 
+                    streamer={streamer} 
+                    streamerItemClick={this.props.streamerItemClick}/>) 
+                }
             </div>
         )
       }

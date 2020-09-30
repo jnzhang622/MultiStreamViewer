@@ -44,13 +44,23 @@ class App extends React.Component {
       height: this.state.height * .9,
       width: this.state.width * .9})
   }
+  streamerItemClick = (e) =>{
+    let updateUrls = []
+    if (this.state.urls.includes(e) != true){
+      this.setState({urls: [...this.state.urls, e]})}
+    else
+      {this.state.urls.map(url => {
+        if (url !== e)
+        updateUrls = [...updateUrls, url]})
+        this.setState({urls: updateUrls})}
+  }
 
   render(){
     // console.log(this.state.streamers)
     return (
-      <div className="divCont">
-        <div>
-          <StreamerBar streamers={this.state.streamers}/>
+      <div>
+        <div className="streamerBar">
+          <StreamerBar streamers={this.state.streamers} streamerItemClick={this.streamerItemClick}/>
         </div>
 
         <div>
@@ -72,7 +82,7 @@ class App extends React.Component {
                 height={this.state.height}
                 width={this.state.width}/>)}
           </div>
-          <div className="defaultCenter">
+          {/* <div className="defaultCenter">
             <button onClick={this.decreaseSize}>-</button>
             <button onClick={this.resetSize}>Reset</button>
             <button onClick={this.increaseSize}>+</button>
@@ -83,9 +93,9 @@ class App extends React.Component {
                 onChange={this.vidCodeFormChange} 
                 value={this.state.searchTerm}/>
             </form>
-          </div>
+          </div> */}
         </div>
-        
+
       </div>
     )
   }

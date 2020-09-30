@@ -9,10 +9,11 @@ class StreamerBarItem extends React.Component {
     
 
     render(){
-        console.log(this.props.streamer)
+        // console.log(this.props.streamer)
         return (
             <div className="streamerBarItem">
-                <p>{this.props.streamer.name}</p>
+                <a onClick={e => this.props.streamerItemClick(this.props.streamer.url)}>
+                    {this.props.streamer.name}</a>
             </div>
         )
       }
