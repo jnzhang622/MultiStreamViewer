@@ -46,7 +46,7 @@ class App extends React.Component {
   }
   streamerItemClick = (e) =>{
     let updateUrls = []
-    if (this.state.urls.includes(e) != true){
+    if (this.state.urls.includes(e) !== true){
       this.setState({urls: [...this.state.urls, e]})}
     else
       {this.state.urls.map(url => {
@@ -60,7 +60,7 @@ class App extends React.Component {
     return (
       <div>
         <div className="streamerBar">
-          <StreamerBar streamers={this.state.streamers} streamerItemClick={this.streamerItemClick}/>
+          <StreamerBar renderedUrls={this.state.urls} streamers={this.state.streamers} streamerItemClick={this.streamerItemClick}/>
         </div>
 
         <div>

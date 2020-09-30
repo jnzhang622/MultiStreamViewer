@@ -4,6 +4,11 @@ import "../App.css";
 class StreamerBarItem extends React.Component {
 
     state = {
+        rendered: false
+    }
+
+    renderedState = () => {
+        this.setState({rendered: !this.state.rendered})
     }
 
     
@@ -11,9 +16,12 @@ class StreamerBarItem extends React.Component {
     render(){
         // console.log(this.props.streamer)
         return (
-            <div className="streamerBarItem">
-                <a onClick={e => this.props.streamerItemClick(this.props.streamer.url)}>
-                    {this.props.streamer.name}</a>
+            <div className={this.props.renderedUrls.includes(this.props.streamer.url) ? 
+                "renderedStreamerBarItem": "defaultStreamerBarItem"}>
+
+                <p onClick={() => this.props.streamerItemClick(this.props.streamer.url)}>
+                    {this.props.streamer.name}</p>
+
             </div>
         )
       }
