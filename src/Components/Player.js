@@ -5,8 +5,8 @@ import ReactPlayer from 'react-player'
 
 class Player extends React.Component {
     state={
-        height: 600,
-        width: 1100,
+        height: 719,
+        width: 1261,
         searchTerm: "",
         rotation: 0,
       }
