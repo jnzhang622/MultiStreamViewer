@@ -32,9 +32,13 @@ class Player extends React.Component {
         }
         else this.setState({rotation: this.state.rotation + 90})
       }
+      removePlayer = () =>{
+
+      }
     
     
       render(){
+        console.log(this.props.url)
         return (
           <div className="divCont">
             <div>
@@ -59,6 +63,7 @@ class Player extends React.Component {
                 controls = {true}
               />
             </div>
+            <button onClick={() => this.props.streamerItemClick(this.props.url)}>X</button>
           </div>
         )
       }

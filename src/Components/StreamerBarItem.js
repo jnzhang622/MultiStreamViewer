@@ -3,7 +3,7 @@ import "../App.css";
 
 class StreamerBarItem extends React.Component {
     render(){
-        // console.log(this.props.streamer)
+        console.log(this.props.streamer)
         return (
             <div className={this.props.renderedUrls.includes(this.props.streamer.url) ? 
                 "renderedStreamerBarItem": "defaultStreamerBarItem"}>

@@ -82,7 +82,8 @@ class App extends React.Component {
             {this.state.urls.map(url => 
               <Player url={url} 
                 height={this.state.height}
-                width={this.state.width}/>)}
+                width={this.state.width}
+                streamerItemClick={this.streamerItemClick}/>)}
           </div>
         </div>
 
