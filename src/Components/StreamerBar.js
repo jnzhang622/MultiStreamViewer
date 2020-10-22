@@ -2,21 +2,25 @@ import React from 'react';
 import "../App.css";
 import StreamerBarItem from "./StreamerBarItem";
 
-class StreamerBar extends React.Component {
-    render(){
-        console.log(this.props.streamers)
-        return (
-            <div>
-                {
-                this.props.streamers.map(streamer => 
-                <StreamerBarItem 
-                    renderedUrls={this.props.renderedUrls}
-                    streamer={streamer} 
-                    streamerItemClick={this.props.streamerItemClick}/>) 
-                }
-            </div>
-        )
-      }
+// class StreamerBar extends React.Component {
+//     render(){
+
+function StreamerBar(props) {
+    let reArrangedStreamers = props.streamers.sort((a,b) => a.name < b.name ? -1 : 1)
+
+    return (
+        <div>
+            {
+            reArrangedStreamers.map(streamer => 
+            <StreamerBarItem 
+                renderedUrls={props.renderedUrls}
+                streamer={streamer} 
+                streamerItemClick={props.streamerItemClick}/>) 
+            }
+        </div>
+    )
 }
+
+// }
 
 export default StreamerBar;

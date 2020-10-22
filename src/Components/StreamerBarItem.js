@@ -1,18 +1,21 @@
 import React from 'react';
 import "../App.css";
 
-class StreamerBarItem extends React.Component {
-    render(){
-        return (
-            <div className={this.props.renderedUrls.includes(this.props.streamer.url) ? 
-                "renderedStreamerBarItem": "defaultStreamerBarItem"}>
+// class StreamerBarItem extends React.Component {
+//     render(){
+    
+function StreamerBarItem(props){
+    return (
+        <div className={props.renderedUrls.includes(props.streamer.url) ? 
+            "renderedStreamerBarItem": "defaultStreamerBarItem"}>
 
-                <p onClick={() => this.props.streamerItemClick(this.props.streamer.url)}>
-                    {this.props.streamer.name}</p>
+            <p onClick={() => props.streamerItemClick(props.streamer.url)}>
+                {props.streamer.name}</p>
 
-            </div>
-        )
-      }
+        </div>
+    )
 }
+
+// }
 
 export default StreamerBarItem;
