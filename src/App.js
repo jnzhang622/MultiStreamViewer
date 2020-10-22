@@ -5,13 +5,19 @@ import StreamerBar from "./Components/StreamerBar"
 
 
 class App extends React.Component {
+  // height: 315
+  // width: 560,
+
+  // height: 550
+  // width: 750
 
   state = {
     urls: [],
     streamers: [],
     searchTerm: "",
-    height: 500,
-    width: 890,
+    height: 421,
+    width: 750,
+    rotation: 0,
   }
 
   componentDidMount() {
@@ -31,18 +37,18 @@ class App extends React.Component {
     
   increaseSize = () =>{
     this.setState({
-      height: this.state.height + 50,
-      width: this.state.width + 89})
+      height: this.state.height * 1.1,
+      width: this.state.width * 1.1})
   }
   resetSize = () =>{
     this.setState({
-      height: 500,
-      width: 890})
+      height: 421,
+      width: 750})
   }
   decreaseSize = () =>{
     this.setState({
-      height: this.state.height - 50,
-      width: this.state.width - 89})
+      height: this.state.height * 0.9,
+      width: this.state.width * 0.9})
   }
   streamerItemClick = (e) =>{
     let updateUrls = []
@@ -80,7 +86,9 @@ class App extends React.Component {
           </div>
           <div className="defaultCenter">
             {this.state.urls.map(url => 
-              <Player url={url} 
+              <Player 
+                url={url} 
+                rotation= {this.state.rotation}
                 height={this.state.height}
                 width={this.state.width}
                 streamerItemClick={this.streamerItemClick}/>)}

@@ -2,11 +2,11 @@ import React from 'react';
 import "../App.css";
 import StreamerBarItem from "./StreamerBarItem";
 
-class StreamerBar extends React.Component {s
+class StreamerBar extends React.Component {
     render(){
-        // console.log(this.props.streamers)
+        console.log(this.props.streamers)
         return (
-            <div >
+            <div>
                 {
                 this.props.streamers.map(streamer => 
                 <StreamerBarItem 
