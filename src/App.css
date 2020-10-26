@@ -49,9 +49,10 @@ body{
 }
 
 .searchBar{
+  position: relative;
   justify-content: center;
   display: flex;
-  width: 99%;
+  width: 700px;
 }
 
 .defaultCenter{

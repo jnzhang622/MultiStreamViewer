@@ -51,14 +51,12 @@ class App extends React.Component {
       width: this.state.width * 0.9})
   }
   streamerItemClick = (e) =>{
-    let updateUrls = []
+    let checkUrl = (url) => {return url !== e}
+
     if (this.state.urls.includes(e) !== true){
       this.setState({urls: [...this.state.urls, e]})}
     else
-      {this.state.urls.map(url => {
-        if (url !== e)
-        updateUrls = [...updateUrls, url]})
-        this.setState({urls: updateUrls})}
+      this.setState({urls: this.state.urls.filter(checkUrl)})
   }
 
   render(){
