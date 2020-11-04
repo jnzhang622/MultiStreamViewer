@@ -1,7 +1,7 @@
 import React from 'react';
 import "./App.css";
-import Player from "./Components/Player"
-import StreamerBar from "./Components/StreamerBar"
+import Player from "./Components/Player";
+import StreamerBar from "./Components/StreamerBar";
 
 
 class App extends React.Component {
