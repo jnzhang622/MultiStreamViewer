@@ -11,10 +11,6 @@ function Player(props) {
 
   return (
     <div className="divCont">
-      <div>
-        <div className="defaultCenter">
-        </div>
-      </div>
       <div className="videoPlayer" 
         style={{transform: `rotate(${rotation}deg)`}}>
         <ReactPlayer

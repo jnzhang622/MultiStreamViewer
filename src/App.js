@@ -15,6 +15,8 @@ class App extends React.Component {
     urls: [],
     streamers: [],
     searchTerm: "",
+    // height: "100%",
+    // width: "100%",
     height: 421,
     width: 750,
     rotation: 0,
@@ -82,7 +84,7 @@ class App extends React.Component {
             <button onClick={this.resetSize}>Reset</button>
             <button onClick={this.increaseSize}>+</button>
           </div>
-          <div className="defaultCenter">
+          <div>
             {this.state.urls.map(url => 
               <Player 
                 url={url} 
