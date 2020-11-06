@@ -5,6 +5,7 @@ import StreamerBar from "./Components/StreamerBar";
 
 
 class App extends React.Component {
+
   state = {
     urls: [],
     streamers: [],
@@ -78,7 +79,7 @@ class App extends React.Component {
             <button onClick={this.resetSize}>Reset</button>
             <button onClick={this.increaseSize}>+</button>
           </div>
-          <div>
+          <div className="playerContainer">
             {this.state.urls.map(url => 
               <Player 
                 url={url} 
