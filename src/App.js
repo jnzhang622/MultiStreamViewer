@@ -5,12 +5,6 @@ import StreamerBar from "./Components/StreamerBar";
 
 
 class App extends React.Component {
-  // height: 315
-  // width: 560,
-
-  // height: 550
-  // width: 750
-
   state = {
     urls: [],
     streamers: [],

@@ -11,7 +11,7 @@ function Player(props) {
 
   return (
     <div className="divCont">
-      <div className="videoPlayer" 
+      <div className="player-wrapper" 
         style={{transform: `rotate(${rotation}deg)`}}>
         <ReactPlayer
           url={url}
