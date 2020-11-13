@@ -75,10 +75,9 @@ body{
   display: flex;
   flex-wrap: wrap;
   padding: 3px;
-
 }
 
-/* .player-wrapper {
+.player-wrapper {
   width: auto; 
   height: auto;
 }
@@ -89,4 +88,4 @@ body{
 
 .react-player > div {
   position: absolute;
-} */
+}
