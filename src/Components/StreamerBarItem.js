@@ -7,7 +7,7 @@ class StreamerBarItem extends React.Component {
 // function StreamerBarItem(props){
     
     componentDidMount() {
-        // e.preventDefault()
+        e.preventDefault()
         fetch(`https://api.twitch.tv/helix/search/channels?query=${this.props.streamer.name}`, {
             headers: {
                 'client-id': `${process.env.CLENTID}`
