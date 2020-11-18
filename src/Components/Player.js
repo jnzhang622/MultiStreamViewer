@@ -2,10 +2,6 @@ import React from 'react';
 import "../App.css";
 import ReactPlayer from 'react-player'
 
-// class Player extends React.Component {
-//       render(){
-
-
 function Player(props) {
   let {url, height, width, rotation} = props;
 

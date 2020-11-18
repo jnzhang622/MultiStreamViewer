@@ -6,16 +6,16 @@ class StreamerBarItem extends React.Component {
     
 // function StreamerBarItem(props){
     
-    componentDidMount() {
-        e.preventDefault()
-        fetch(`https://api.twitch.tv/helix/search/channels?query=${this.props.streamer.name}`, {
-            headers: {
-                'client-id': `${process.env.CLENTID}`
-            }
-        })
-        .then(resp => resp.json())
-        .then(data=>{console.log(data)})
-    } 
+    // componentDidMount(e) {
+    //     e.preventDefault()
+    //     fetch(`https://api.twitch.tv/helix/search/channels?query=${this.props.streamer.name}`, {
+    //         headers: {
+    //             'client-id': `${process.env.CLENTID}`
+    //         }
+    //     })
+    //     .then(resp => resp.json())
+    //     .then(data=>{console.log(data)})
+    // } 
 
     render(){
         return (
