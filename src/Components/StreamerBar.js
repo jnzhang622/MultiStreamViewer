@@ -9,7 +9,7 @@ function StreamerBar(props) {
     let reArrangedStreamers = props.streamers.sort((a,b) => a.name < b.name ? -1 : 1)
 
     return (
-        <div>
+        <div className="streamerBar">
             {
             reArrangedStreamers.map(streamer => 
             <StreamerBarItem 

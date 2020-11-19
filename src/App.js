@@ -15,6 +15,7 @@ class App extends React.Component {
     height: 421,
     width: 750,
     rotation: 0,
+    hideBar: true
   }
 
   componentDidMount() {
@@ -47,6 +48,11 @@ class App extends React.Component {
       height: this.state.height * 0.9,
       width: this.state.width * 0.9})
   }
+  showHideBar = () => {
+    this.setState({
+      hideBar: !this.state.hideBar
+    })
+  }
   streamerItemClick = (e) =>{
     let checkUrl = (url) => {return url !== e}
 
@@ -59,19 +65,12 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <div className="streamerBar">
-          <StreamerBar 
-            renderedUrls={this.state.urls} 
-            streamers={this.state.streamers} 
-            streamerItemClick={this.streamerItemClick}/>
-        </div>
-
-        <div>
-          <div className="searchBarDiv">
+        <div className="searchBarDiv">
             <form onSubmit={this.changeVidCode}>
               <input className="searchBar" 
                 onChange={this.vidCodeFormChange} 
-                value={this.state.searchTerm}/>
+                value={this.state.searchTerm}
+                placeholder="Input Streamer URL Here"/>
             </form>
           </div>
           <div className="defaultCenter">
@@ -79,17 +78,29 @@ class App extends React.Component {
             <button onClick={this.resetSize}>Reset</button>
             <button onClick={this.increaseSize}>+</button>
           </div>
-          <div className="playerContainer">
-            {this.state.urls.map(url => 
-              <Player 
-                url={url} 
-                rotation= {this.state.rotation}
-                height={this.state.height}
-                width={this.state.width}
-                streamerItemClick={this.streamerItemClick}/>)}
+        <div className="divCont">
+          <div className="barDiv">
+            <div >
+              <button onClick={this.showHideBar}>{this.state.hideBar ? "Show" : "Hide"}</button>
+            </div>
+            {(this.state.hideBar === false) ?
+            <StreamerBar className="barDiv"
+              renderedUrls={this.state.urls} 
+              streamers={this.state.streamers} 
+              streamerItemClick={this.streamerItemClick}/> : null}
+          </div>
+          <div className="divCont2">
+            <div className="playerContainer">
+              {this.state.urls.map(url => 
+                <Player 
+                  url={url} 
+                  rotation= {this.state.rotation}
+                  height={this.state.height}
+                  width={this.state.width}
+                  streamerItemClick={this.streamerItemClick}/>)}
+            </div>
           </div>
         </div>
-
       </div>
     )
   }
