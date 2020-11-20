@@ -17,7 +17,7 @@ function Player(props) {
           controls = {true}
         />
       </div>
-      <button onClick={() => props.streamerItemClick(url)}>X</button>
+      <button className="defaultButton" onClick={() => props.streamerItemClick(url)}>X</button>
     </div>
   )
 }

@@ -74,22 +74,12 @@ class App extends React.Component {
             </form>
           </div>
           <div className="defaultCenter">
-            <button onClick={this.decreaseSize}>-</button>
-            <button onClick={this.resetSize}>Reset</button>
-            <button onClick={this.increaseSize}>+</button>
+            <button className="defaultButton" onClick={this.decreaseSize}>-</button>
+            <button className="defaultButton" onClick={this.resetSize}>Reset</button>
+            <button className="defaultButton" onClick={this.increaseSize}>+</button>
           </div>
         <div className="divCont">
-          <div className="barDiv">
-            <div >
-              <button onClick={this.showHideBar}>{this.state.hideBar ? "Show" : "Hide"}</button>
-            </div>
-            {(this.state.hideBar === false) ?
-            <StreamerBar className="barDiv"
-              renderedUrls={this.state.urls} 
-              streamers={this.state.streamers} 
-              streamerItemClick={this.streamerItemClick}/> : null}
-          </div>
-          <div className="divCont2">
+          {/* <div className="divCont2"> */}
             <div className="playerContainer">
               {this.state.urls.map(url => 
                 <Player 
@@ -99,6 +89,16 @@ class App extends React.Component {
                   width={this.state.width}
                   streamerItemClick={this.streamerItemClick}/>)}
             </div>
+          {/* </div> */}
+          <div className="barDiv">
+            <div >
+              <button className="showBarButton" onClick={this.showHideBar}>{this.state.hideBar ? "Show" : "Hide"}</button>
+            </div>
+            {(this.state.hideBar === false) ?
+            <StreamerBar className="barDiv"
+              renderedUrls={this.state.urls} 
+              streamers={this.state.streamers} 
+              streamerItemClick={this.streamerItemClick}/> : null}
           </div>
         </div>
       </div>
