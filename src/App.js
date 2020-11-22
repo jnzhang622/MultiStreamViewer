@@ -92,7 +92,7 @@ class App extends React.Component {
           {/* </div> */}
           <div className="barDiv">
             <div >
-              <button className="showBarButton" onClick={this.showHideBar}>{this.state.hideBar ? "Show" : "Hide"}</button>
+              <button className="showBarButton" onClick={this.showHideBar}>{this.state.hideBar ? "Show Sidebar" : "Hide Sidebar"}</button>
             </div>
             {(this.state.hideBar === false) ?
             <StreamerBar className="barDiv"
