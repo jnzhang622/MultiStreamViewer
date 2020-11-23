@@ -65,41 +65,41 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <div className="searchBarDiv">
-            <form onSubmit={this.changeVidCode}>
-              <input className="searchBar" 
-                onChange={this.vidCodeFormChange} 
-                value={this.state.searchTerm}
-                placeholder="Input Streamer URL Here"/>
-            </form>
+        <div className={this.state.hideBar ? "hiddenSideBar" : "shownSidebarDiv"}>
+            <div >
+              <button className="showBarButton" onClick={this.showHideBar}>{this.state.hideBar ? "Show Sidebar" : "Hide Sidebar"}</button>
+            </div>
+            {(this.state.hideBar === false) ?
+            <StreamerBar
+              renderedUrls={this.state.urls} 
+              streamers={this.state.streamers} 
+              streamerItemClick={this.streamerItemClick}/> : null}
+        </div> 
+        <div >
+          <div className="searchBarDiv">
+              <form onSubmit={this.changeVidCode}>
+                <input className="searchBar" 
+                  onChange={this.vidCodeFormChange} 
+                  value={this.state.searchTerm}
+                  placeholder="Input Streamer URL Here"/>
+              </form>
           </div>
           <div className="defaultCenter">
             <button className="defaultButton" onClick={this.decreaseSize}>-</button>
             <button className="defaultButton" onClick={this.resetSize}>Reset</button>
             <button className="defaultButton" onClick={this.increaseSize}>+</button>
           </div>
-        <div className="divCont">
-          {/* <div className="divCont2"> */}
-            <div className="playerContainer">
-              {this.state.urls.map(url => 
-                <Player 
-                  url={url} 
-                  rotation= {this.state.rotation}
-                  height={this.state.height}
-                  width={this.state.width}
-                  streamerItemClick={this.streamerItemClick}/>)}
-            </div>
+          {/* <div className="divCont"> */}
+              <div className="playerContainer">
+                {this.state.urls.map(url => 
+                  <Player 
+                    url={url} 
+                    rotation= {this.state.rotation}
+                    height={this.state.height}
+                    width={this.state.width}
+                    streamerItemClick={this.streamerItemClick}/>)}
+              </div>
           {/* </div> */}
-          <div className="barDiv">
-            <div >
-              <button className="showBarButton" onClick={this.showHideBar}>{this.state.hideBar ? "Show Sidebar" : "Hide Sidebar"}</button>
-            </div>
-            {(this.state.hideBar === false) ?
-            <StreamerBar className="barDiv"
-              renderedUrls={this.state.urls} 
-              streamers={this.state.streamers} 
-              streamerItemClick={this.streamerItemClick}/> : null}
-          </div>
         </div>
       </div>
     )
