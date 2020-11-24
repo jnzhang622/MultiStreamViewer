@@ -19,6 +19,7 @@ body{
   height: 100%;
   overflow: scroll;
   scrollbar-color: #39125a #242424;
+  background-color: #353535;
 }
 
 .shownSidebarDiv{
