@@ -6,7 +6,7 @@ function Player(props) {
   let {url, height, width, rotation} = props;
 
   return (
-    <div className="divCont">
+    <div className="vidCont">
       <div className="videoPlayer" 
         style={{transform: `rotate(${rotation}deg)`}}>
         <ReactPlayer

@@ -3,7 +3,7 @@ body{
   color: white;
   background-size: 100% ;
 }
-.divCont{
+.vidCont{
   display: flex;
   flex-direction: row;
 }
