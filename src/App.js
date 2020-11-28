@@ -12,8 +12,8 @@ class App extends React.Component {
     searchTerm: "",
     // height: "100%",
     // width: "100%",
-    height: 458,
-    width: 816,
+    height: 453,
+    width: 808,
     rotation: 0,
     hideBar: true
   }
