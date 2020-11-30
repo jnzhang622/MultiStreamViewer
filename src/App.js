@@ -89,7 +89,6 @@ class App extends React.Component {
             <button className="defaultButton" onClick={this.resetSize}>Reset</button>
             <button className="defaultButton" onClick={this.increaseSize}>+</button>
           </div>
-          {/* <div className="divCont"> */}
               <div className="playerContainer">
                 {this.state.urls.map(url => 
                   <Player 
@@ -99,7 +98,6 @@ class App extends React.Component {
                     width={this.state.width}
                     streamerItemClick={this.streamerItemClick}/>)}
               </div>
-          {/* </div> */}
         </div>
       </div>
     )
