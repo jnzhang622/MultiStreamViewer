@@ -11,7 +11,7 @@ class App extends React.Component {
     streamers: [],
     searchTerm: "",
     // height: "100%",
-    // width: "100%",
+    // width: "auto",
     height: 453,
     width: 808,
     rotation: 0,
