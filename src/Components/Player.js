@@ -11,7 +11,7 @@ function Player(props) {
         style={{transform: `rotate(${rotation}deg)`}}>
         <ReactPlayer
           url={url}
-          height={height}
+          height={width *0.5631188118811881}
           width={width}
           playing = {true}
           controls = {true}

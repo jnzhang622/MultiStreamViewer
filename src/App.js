@@ -12,7 +12,7 @@ class App extends React.Component {
     searchTerm: "",
     // height: "auto",
     // width: "100%",
-    height: 453,
+    // height: 455,
     width: 808,
     rotation: 0,
     hideBar: true
@@ -35,17 +35,17 @@ class App extends React.Component {
     
   increaseSize = () =>{
     this.setState({
-      height: this.state.height * 1.1,
+      // height: this.state.height * 1.1,
       width: this.state.width * 1.1})
   }
   resetSize = () =>{
     this.setState({
-      height: 453,
+      // height: 455,
       width: 808})
   }
   decreaseSize = () =>{
     this.setState({
-      height: this.state.height * 0.9,
+      // height: this.state.height * 0.9,
       width: this.state.width * 0.9})
   }
   showHideBar = () => {
@@ -94,7 +94,7 @@ class App extends React.Component {
               <Player 
                 url={url} 
                 rotation= {this.state.rotation}
-                height={this.state.height}
+                // height={this.state.width *0.5631188118811881}
                 width={this.state.width}
                 streamerItemClick={this.streamerItemClick}/>)}
           </div>

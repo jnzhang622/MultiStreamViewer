@@ -7,9 +7,9 @@ body{
   height: 99.9%;
   width: 99.9%;
   position: absolute;
-  border-color: white;
+  /* border-color: white;
   border-style: solid;
-  border-width: 1px;
+  border-width: 1px; */
 }
 .vidCont{
   display: flex;
@@ -121,8 +121,8 @@ body{
   display: flex;
   flex-wrap: wrap;
   padding: 3px;
-  border-color: white;
+  /* border-color: white;
   border-style: solid;
-  border-width: 1px;
+  border-width: 1px; */
   height: 100%;
 }
