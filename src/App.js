@@ -10,10 +10,10 @@ class App extends React.Component {
     urls: [],
     streamers: [],
     searchTerm: "",
-    height: "auto",
-    width: "100%",
-    // height: 453,
-    // width: 808,
+    // height: "auto",
+    // width: "100%",
+    height: 453,
+    width: 808,
     rotation: 0,
     hideBar: true
   }
@@ -40,8 +40,8 @@ class App extends React.Component {
   }
   resetSize = () =>{
     this.setState({
-      height: 421,
-      width: 750})
+      height: 453,
+      width: 808})
   }
   decreaseSize = () =>{
     this.setState({
@@ -64,7 +64,7 @@ class App extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className="fullScreen">
         <div className={this.state.hideBar ? "hiddenSideBar" : "shownSidebarDiv"}>
             <div >
               <button className="showBarButton" onClick={this.showHideBar}>{this.state.hideBar ? "Show Sidebar" : "Hide Sidebar"}</button>

@@ -3,9 +3,19 @@ body{
   color: white;
   background-size: 100% ;
 }
+.fullScreen{
+  height: 99.9%;
+  width: 99.9%;
+  position: absolute;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+}
 .vidCont{
   display: flex;
   flex-direction: row;
+  /* height: 33%;
+  width: 33%; */
 }
 
 .streamerBar{
@@ -15,7 +25,7 @@ body{
   border-style: solid;
   border-width: 1px;
   position: relative;
-  width: 84%;
+  width: 87%;
   height: 100%;
   overflow: scroll;
   scrollbar-color: #39125a #242424;
@@ -101,9 +111,12 @@ body{
   display: flex;
   flex-wrap: wrap;
   padding: 2px;
+  height: 100%;
+  width: 100%;
 }
 
 .playerContainer{
+  /* position: inherit; */
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -111,4 +124,5 @@ body{
   border-color: white;
   border-style: solid;
   border-width: 1px;
+  height: 100%;
 }
