@@ -64,7 +64,7 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className="fullScreen">
+      <div>
         <div className={this.state.hideBar ? "hiddenSideBar" : "shownSidebarDiv"}>
             <div >
               <button className="showBarButton" onClick={this.showHideBar}>{this.state.hideBar ? "Show Sidebar" : "Hide Sidebar"}</button>
