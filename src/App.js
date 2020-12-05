@@ -94,7 +94,7 @@ class App extends React.Component {
               <Player 
                 url={url} 
                 rotation= {this.state.rotation}
-                // height={this.state.width *0.5631188118811881}
+                // height={this.state.height}
                 width={this.state.width}
                 streamerItemClick={this.streamerItemClick}/>)}
           </div>
