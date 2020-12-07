@@ -10,6 +10,9 @@ class App extends React.Component {
     urls: [],
     streamers: [],
     searchTerm: "",
+    // height: "auto",
+    // width: "100%",
+    // height: 455,
     width: 808,
     rotation: 0,
     hideBar: true
