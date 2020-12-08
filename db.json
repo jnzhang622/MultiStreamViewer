@@ -1,10 +1,6 @@
 {
     "streamers": [
         {
-            "name": "Pokimane",
-            "url": "https://www.twitch.tv/pokimane"
-        },
-        {
             "name": "Bnans",
             "url": "https://www.twitch.tv/bnans"
         },
@@ -107,6 +103,10 @@
         {
             "name": "itsHafu",
             "url": "https://www.twitch.tv/itsHafu"
+        },
+        {
+            "name": "Pokimane",
+            "url": "https://www.twitch.tv/pokimane"
         }
     ]
 }
