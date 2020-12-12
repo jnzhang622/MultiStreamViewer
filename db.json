@@ -81,7 +81,7 @@
             "url": "https://www.twitch.tv/KristoferYee"
         },
         {
-            "name": "AshonLol",
+            "name": "Ash_on_Lol",
             "url": "https://www.twitch.tv/ash_on_lol"
         },
         {
@@ -107,6 +107,10 @@
         {
             "name": "Pokimane",
             "url": "https://www.twitch.tv/pokimane"
+        },
+        {
+            "name": "itsHafu",
+            "url": "https://www.twitch.tv/itsHafu"
         }
     ]
 }
