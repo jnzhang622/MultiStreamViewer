@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 import "./App.css";
 import Player from "./Components/Player";
 import StreamerBar from "./Components/StreamerBar";
@@ -18,10 +19,23 @@ class App extends React.Component {
     hideBar: true
   }
 
+  // componentDidMount() {
+  //   fetch(`/streamerdata.json`)
+  //     .then(resp => resp.json())
+  //     .then(arr => this.setState({ streamers: arr }))
+  // }
   componentDidMount() {
-    fetch(`http://localhost:3001/streamers`)
-      .then(resp => resp.json())
-      .then(arr => this.setState({ streamers: arr }))
+    $.ajax({
+      url:'/streamerdata.json',
+      dataType:'json',
+      cache: false,
+      success: function(arr){
+        this.setState({streamers: arr});
+      }.bind(this),
+      error: function(xhr, status, err){
+        alert(err);
+      }
+    });
   }
 
   changeVidCode = (e) =>{
