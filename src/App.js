@@ -20,19 +20,22 @@ class App extends React.Component {
   }
 
   // componentDidMount() {
-  //   fetch(`/streamerdata.json`)
+  //   fetch(`http://localhost:3001/streamers`)
   //     .then(resp => resp.json())
   //     .then(arr => this.setState({ streamers: arr }))
   // }
-  componentDidMount() {
+
+  componentDidMount(){
     $.ajax({
-      url:'/streamerdata.json',
+      url:'./streamerdata.json',
       dataType:'json',
       cache: false,
       success: function(arr){
-        this.setState({streamers: arr});
+        console.log(arr)
+        this.setState({streamers: arr.streamers});
       }.bind(this),
       error: function(xhr, status, err){
+        console.log(err);
         alert(err);
       }
     });
