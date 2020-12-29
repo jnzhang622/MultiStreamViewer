@@ -37,7 +37,7 @@ class StreamerBarItem extends React.Component {
           }
         });
       }
-      //testing git
+      //testing git some more
     
 
     render(){
