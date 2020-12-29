@@ -21,23 +21,22 @@ class StreamerBarItem extends React.Component {
 
     // url: 'https://api.twitch.tv/helix/streams?user_login=Zhajn',
 
-    componentDidMount(){
-        $.ajax({
-          url:`https://api.twitch.tv/helix/search/channels?query=${this.props.streamer.name}`,
-          headers: {"Client-ID": `${process.env.CLENTID}`},
-          dataType:'json',
-          cache: false,
-          success: function(arr){
-            console.log(arr)
-            this.setState({streamerInfo: arr.streamers});
-          }.bind(this),
-          error: function(xhr, status, err){
-            console.log(err);
-            alert(err);
-          }
-        });
-      }
-      //testing git some more
+    // componentDidMount(){
+    //     $.ajax({
+    //       url:`https://api.twitch.tv/helix/search/streams?user_login=${this.props.streamer.name}`,
+    //       type:'get',
+    //       headers: {"Client-ID": 'rw9890085q0n16b35h2vhtyh4lztcv'},
+    //       dataType:'json',
+    //       success: function(arr){
+    //         console.log(arr)
+    //         // this.setState({streamerInfo: arr.streamers});
+    //       }.bind(this),
+    //       error: function(xhr, status, err){
+    //         console.log(err);
+    //         alert(err);
+    //       }
+    //     });
+    //   }
     
 
     render(){

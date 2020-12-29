@@ -31,7 +31,7 @@ class App extends React.Component {
       dataType:'json',
       cache: false,
       success: function(arr){
-        console.log(arr)
+        // console.log(arr)
         this.setState({streamers: arr.streamers});
       }.bind(this),
       error: function(xhr, status, err){
