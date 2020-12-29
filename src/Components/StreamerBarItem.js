@@ -2,6 +2,9 @@ import React from 'react';
 import "../App.css";
 
 class StreamerBarItem extends React.Component {
+    state = {
+
+    }
 // function StreamerBarItem(props){
     
     // componentDidMount(e) {
@@ -17,22 +20,22 @@ class StreamerBarItem extends React.Component {
 
     // url: 'https://api.twitch.tv/helix/streams?user_login=Zhajn',
 
-    // componentDidMount(){
-    //     $.ajax({
-    //       url:`https://api.twitch.tv/helix/search/channels?query=${this.props.streamer.name}`,
-    //       headers: {"Client-ID": `${process.env.CLENTID}`},
-    //       dataType:'json',
-    //       cache: false,
-    //       success: function(arr){
-    //         console.log(arr)
-    //         this.setState({streamers: arr.streamers});
-    //       }.bind(this),
-    //       error: function(xhr, status, err){
-    //         console.log(err);
-    //         alert(err);
-    //       }
-    //     });
-    //   }
+    componentDidMount(){
+        $.ajax({
+          url:`https://api.twitch.tv/helix/search/channels?query=${this.props.streamer.name}`,
+          headers: {"Client-ID": `${process.env.CLENTID}`},
+          dataType:'json',
+          cache: false,
+          success: function(arr){
+            console.log(arr)
+            this.setState({streamerInfo: arr.streamers});
+          }.bind(this),
+          error: function(xhr, status, err){
+            console.log(err);
+            alert(err);
+          }
+        });
+      }
     
 
     render(){
