@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 import "../App.css";
 
 class StreamerBarItem extends React.Component {
