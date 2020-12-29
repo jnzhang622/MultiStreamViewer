@@ -3,7 +3,7 @@ import "../App.css";
 import ReactPlayer from 'react-player'
 
 function Player(props) {
-  let {url, height, width, rotation} = props;
+  let {url, width, rotation} = props;
 
   return (
     <div className="vidCont">
